@@ -1,6 +1,6 @@
 <div align="center">
 
-# CSC1061 FALL 2023 CLASS PROJECT
+# CSC1061 SPRING 2024 CLASS PROJECT
 
 </div>
 
@@ -8,11 +8,11 @@
 
 [**Getting Started**](#getting-started)
 
-[**Creating and Cloning Fork**](#creating-a-fork-of-the-main-repository)
+[**Cloning Main Repository and Checking out a branch**](#cloning-the-repository)
 
 [**Understanding and Working with Git**](#understanding-and-working-with-git)
 
-[**Syncing Your Fork with the Main Repository**](#syncing-your-fork-with-the-main-repository)
+[**Syncing With Main Repository**](#syncing-your-local-repo-with-the-main-repository)
 
 [**Submitting Your Code**](#submitting-your-code)
 
@@ -84,7 +84,7 @@ Now you have a local copy of the codebase on your machine, and it can be opened 
 
 The beauty of Git is its ability to share and help *version* our code.
 
-Three primary levels of Git are important to understand. The **local repository** (the cloned Fork in your ClassProjects directory), the **staging area** (intermediate reviewing step before committing and pushing to your remote repository), and the **remote repository** (your GitHub Fork).
+Three primary levels of Git are important to understand. The **local repository** (cloned repo to local machine with branch), the **staging area** (intermediate reviewing step before committing and pushing to your remote repository), and the **remote repository** (Main Repo).
 
 The ***local repository*** (local repo)  is the copy of the repository on your machine (the repo we just cloned). The ***staging area*** is something we have yet to come across. After you have written some code, you can add the changes you have made to the staging area. The staging area allows the files you have changed to sit before you are ready to **commit** and **push** them into the remote repo, much like laying out the things you want to take on the bed before putting them in your suitcase. 
 
