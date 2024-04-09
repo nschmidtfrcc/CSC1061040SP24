@@ -1,0 +1,5 @@
+# catch all codeowners
+* @sparkdragon586 @stevenBhub @nschmidtfrcc
+
+# make sure no one else can change settings and codeowners
+/.github/ @sparkdragon586 @stevenBhub @nschmidtfrcc
