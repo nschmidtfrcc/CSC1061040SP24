@@ -1,12 +1,20 @@
 #include <iostream>
-#include <fstream>
 #include <string>
 using namespace std;
 
 class Vehicle{
 public:
-//parameterized constructor will read values from file and assigns them to the private variables. The file name is passed as a parameter to the constructor. ex. Vehicle("car.txt").
-Vehicle(const string& filename);
+
+Vehicle(){
+string make = "";
+string model = "";
+string color = "";
+string vin = "";
+int year = 0;
+int timeOnLot = 0;
+int price = 0;
+bool sold = false;
+};
 
 void SetMake(string make);
 string GetMake();
@@ -22,7 +30,7 @@ void SetTimeOnLot(int timeOnLot);
 int GetTimeOnLot();
 void SetPrice(int price);
 int GetPrice();
-void PrintVehicle(); 
+void DisplayVehicle(); 
 
 private:
 string make;
