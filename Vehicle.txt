@@ -1,0 +1,22 @@
+Vehicle
+Toyata
+Corolla
+White
+265456
+2020
+2 years
+$17,000
+No
+Vehicle
+Honda
+Civic
+Blue
+557128
+2015
+8 Years
+8,000
+Yes
+Vehicle
+Honda
+Accord
+Silver
