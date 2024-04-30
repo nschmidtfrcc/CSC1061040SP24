@@ -11,7 +11,7 @@ struct vehicleTypesOnOffLot{
 };
 
 void searchVehicle(vector<Vehicle> vehicles);
-void displayVehicle(vector<vehicleTypesOnOffLot> vehicleTypes);
+void displayVehicle(string searchType, vector<vehicleTypesOnOffLot> vehicleTypes);
 
 
 int main(){
@@ -30,6 +30,7 @@ void searchVehicle(vector<Vehicle> vehicles){
     char numValChar;
     bool done;
     string type;
+    string searchType;
     vehicleTypesOnOffLot dud;
     vector<vehicleTypesOnOffLot> vehicleTypes;
 
@@ -60,22 +61,27 @@ void searchVehicle(vector<Vehicle> vehicles){
             case 49:
                 // Make
                 type = vehicles.at(i).GetMake();
+                searchType = "Make";
                 break;
             case 50:
                 // Model
                 type = vehicles.at(i).GetModel();
+                searchType = "Model";
                 break;
             case 51:
                 // Year
                 type = to_string(vehicles.at(i).GetYear());
+                searchType = "Year";
                 break;
             case 52:
                 // Color
                 type = vehicles.at(i).GetColor();
+                searchType = "Color";
                 break;
             case 53:
                 // Time on Lot
                 type = to_string(vehicles.at(i).GetTimeOnLot());
+                searchType = "Time on Lot";
                 break;
             default:
                 break;
@@ -111,12 +117,12 @@ void searchVehicle(vector<Vehicle> vehicles){
     } // end for
 
     // Passing in the vehicleTypes vector to the display vehicle so they can do it
-    displayVehicle(vehicleTypes);
+    displayVehicle(searchType, vehicleTypes);
 } // end searchVehicle()
 
 
 
 
-void displayVehicle(vector<vehicleTypesOnOffLot> vehicleTypes){
+void displayVehicle(string searchType, vector<vehicleTypesOnOffLot> vehicleTypes){
 
 }
