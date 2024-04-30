@@ -5,7 +5,7 @@ White
 265456
 2020
 2 years
-$17,000
+17000
 No
 Vehicle
 Honda
@@ -14,9 +14,59 @@ Blue
 557128
 2015
 8 Years
-8,000
+8000
 Yes
 Vehicle
 Honda
 Accord
 Silver
+102300
+2001
+8 years
+5000
+Yes
+Vehicle
+BMW
+3 Series
+Blue
+265498
+20015
+6 years
+15000
+No
+Vehicle
+Mercedes
+E200
+White
+145710
+2020
+1 year
+23000
+Yes
+Vehicle
+Subaru
+WRX
+Black
+994231
+2014
+2 years
+14000
+No
+Vehicle
+Lexus
+IS500
+Silver
+345915
+2019
+1 year
+35000
+No
+Vehicle
+Dodge
+Challenger SRT
+Red
+153980
+2015
+1 year
+22000
+Yes
