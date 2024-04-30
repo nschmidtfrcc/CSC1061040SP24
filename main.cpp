@@ -22,7 +22,9 @@ int main(){
 
 
 
-
+// Input: vector of vehicles, asks for number between 1-5 from user
+// Process: Validates user input and then puts the correct type of search value in the vector of vehicleTypesOnOffLot
+// Output: No output but calls the displayVehicle function
 void searchVehicle(vector<Vehicle> vehicles){
     string numValString;
     char numValChar;
