@@ -14,14 +14,22 @@ int displayMenu() {
 //O: Output user choice
 
 int userChoice = 0;
-
-   cout << "Would you like to search inventory(1), display sales data(2), or access a list of customers(3): ";
+   
+   cout << "Welcome to the Front Range Community Car Lot Database!" << endl; 
+   cout << "| Would you like to search:                          |" << endl;
+   cout << "| 1. Inventory                                       |" << endl;
+   cout << "| 2. Sales Data                                      |" << endl;
+   cout << "| 3. List of Customers                               |" << endl << endl;
+   cout << "Enter Choice: ";
+   
    cin >> userChoice;
     
    if (userChoice < 1 || userChoice  > 3) {
       cout << endl << "Please input a valid number" << endl;
    }else{
-       
+      return userChoice;
    }//end if-else
-   return userChoice;
+   
+   return 0;
+   
 }//end displayMenu
