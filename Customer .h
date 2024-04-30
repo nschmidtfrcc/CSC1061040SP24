@@ -1,6 +1,5 @@
-#ifndef CUSTOMER_H
-#define CUSTOMER_H
-
+#ifndef Customer_H
+#define Customer_H
 #include <string>
 #include <iostream>
 using namespace std;

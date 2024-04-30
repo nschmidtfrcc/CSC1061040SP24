@@ -1,6 +1,6 @@
+#include "Customer.h"
 #include <iostream>
 #include <string>
-#include "Customer.h"
 using namespace std;
 
 //Input: Hard coded in the program.(MH)
@@ -95,14 +95,19 @@ string Customer::GetContactInfo(){
    return contactInfo;
 }//End of GetContactInfo().(MH)
 
+//Input: Takes the data within in the class data members.(MH)
+//Proccess:It will display the data members of Customer to show all the info about the customer.(MH)
+//Output:DIsplays text and returns nothing.(MH)
 void DisplayCustomer(){
    cout << "Customer: " << firstName << " " << lastName << endl;
    cout << "Vin number to the car is : " << vinNumber << endl;
-   if(){
    
+   if(bought == true){
+      cout << "The customer has bought a car" << endl;
    }//End of if().(MH)
    else{
-   
+      cout << "The customer has not bought a car" << endl;
    }//End of else().(MH)
    
+   cout << "Phone number is " << contactInfo;
 }//End of DisplayCustomer().(MH)
