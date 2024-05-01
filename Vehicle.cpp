@@ -42,4 +42,6 @@ void Vehicle::SetPrice(int price){
 int Vehicle::GetPrice(){
   return price;
 }
-void Vehicle::DisplayVehicle(){}
+void Vehicle::DisplayVehicle(){
+
+}
