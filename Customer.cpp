@@ -6,7 +6,7 @@ using namespace std;
 //Input: Hard coded in the program.(MH)
 //Process: Sets the default values for all the data in the default constructor.(MH)
 //Output: None (MH)
-void Customer::Customer(){
+Customer::Customer(){
    bought = false;
    vinNumber = "ABCD1234EFGH56780";
    firstName = "No first name";
@@ -17,7 +17,7 @@ void Customer::Customer(){
 //Input: Data inputed from the user.(MH)
 //Process: Sets the data members values from the input of the user when Customer constructor is called.(MH)
 //Output: None (MH)
-void Customer:Customer(bool boughtStatus, string initVin, string initFirst, string initLast, string initContact){
+Customer::Customer(bool boughtStatus, string initVin, string initFirst, string initLast, string initContact){
    bought = boughtStatus;
    vinNumber = initVin;
    firstName = initFirst;
@@ -98,7 +98,7 @@ string Customer::GetContactInfo(){
 //Input: Takes the data within in the class data members.(MH)
 //Proccess:It will display the data members of Customer to show all the info about the customer.(MH)
 //Output:DIsplays text and returns nothing.(MH)
-void DisplayCustomer(){
+void Customer::DisplayCustomer(){
    cout << "Customer: " << firstName << " " << lastName << endl;
    cout << "Vin number to the car is : " << vinNumber << endl;
    

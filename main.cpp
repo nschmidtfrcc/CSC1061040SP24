@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include "Vehicle.h"
 #include "Customer.h"
 using namespace std;
@@ -7,8 +8,8 @@ using namespace std;
 //Process: Files are read and vectors of vehicles and customers are made. The user navitages menus to search for vehicles and customers based on specific data values. Sales data can also be searched. MD
 //Output: The program outputs the result of the user's search. MD
 int main() {
-
-
-
-  
+   //Declarations.(MH)
+   vector<Vehicle> Vehicles;
+   vector<Customer> Customers;
+     
 }//end main
