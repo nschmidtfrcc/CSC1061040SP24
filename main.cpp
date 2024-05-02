@@ -6,7 +6,7 @@ using namespace std;
 
 int displayMenu();
 
-
+int calculateSales(const vector<Vehicle>& vehicles, int salesDay, int salesWeek, int salesMonth);
 void DisplaySales(int salesDay, int salesWeek, int salesMonth);
 
 
@@ -51,6 +51,33 @@ int main() {
 
   
 }//end main
+
+//Input: A vector with all of the vehicles, dailySales, weeklySales and monthlySales.
+//Process: Creates totalSales; updates dailySales, weeklySales, and monthlySales
+//Output: Total sales value.
+int calculateSales(const vector<Vehicle>& vehicles, int salesDay, int salesWeek, int salesMonth) {
+    int salesTotal = 0;
+    // Iterates through Vehicle vector
+    for (const auto& vehicle : vehicles) {
+      if(vehicle.isSold()){
+          salesTotal += vehicle.getSalePrice(); // May be .getPrice()
+          
+          // If the vehicle sold today, add it to dailySales
+          if (vehicle.timeOnLot() <= 1) {
+              salesDay += vehicle.getSalePrice();
+          }
+          // If the vehicle sold this week, add it to weeklySales
+          if (((vehicle.timeOnLot() % 7) <= 7)) {
+              salesWeek += vehicle.getSalePrice();
+          }
+          // If the vehicle sold this month, add it to monthlySales
+          if (vehicle.timeOnLot() <= 30) { // 30 is the average amount of days in a month.
+              salesMonth += vehicle.getSalePrice();
+          }
+      }
+  }
+    return salesTotal;
+}
 
 void DisplaySales(int salesDay, int salesWeek, int salesMonth) {
     cout << "Sales today: $" << salesDay << endl;
