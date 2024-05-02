@@ -42,6 +42,12 @@ void Vehicle::SetPrice(int price){
 int Vehicle::GetPrice(){
   return price;
 }
+void Vehicle::SetSold(bool sold){
+  this->sold = sold;
+}
+bool Vehicle::GetSold(){
+  return sold;
+}
 void Vehicle::DisplayVehicle(){
 
 }

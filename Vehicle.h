@@ -34,6 +34,8 @@ public:
   int GetTimeOnLot();
   void SetPrice(int price);
   int GetPrice();
+  void SetSold(bool sold);
+  bool GetSold();
   void DisplayVehicle();
 
 private:
