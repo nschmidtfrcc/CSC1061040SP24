@@ -5,6 +5,13 @@
 #include <fstream>
 using namespace std;
 
+int DisplayMenu();
+
+void DisplaySales(int salesDay, int salesWeek, int salesMonth);
+
+//Input: Vehicle and custmer data read from file. User input to navigate menus to search. MD
+//Process: Files are read and vectors of vehicles and customers are made. The user navitages menus to search for vehicles and customers based on specific data values. Sales data can also be searched. MD
+//Output: The program outputs the result of the user's search. MD
 struct vehicleTypesOnOffLot {
   string type;
   int onLot = 0;
@@ -12,30 +19,11 @@ struct vehicleTypesOnOffLot {
 };
 
 
-//Input: N/A
-//Process: Reads the text files and populates variables which then fills the vectors of objects with the created objects
-//Output: Returns boolean value based off of success of read operation
-bool readFile() {
-	bool boughtStatus, sold;
-	string tmp, vinNum, firstName, lastName, phoneNum, make, model, color, vin;
-	int year, timeOnLot, price;
-	vector<Customer> customerVec;
-	vector<Vehicle> vehicleVec;
-	ifstream inputFileC("customer.txt");
-	ifstream inputFileV("vehicle.txt");
-	if(!inputFileC.is_open() || !inputFileV.is_open()) {
-		throw runtime_error("Failed to open file. Exiting...");
-		return false;
-	}
->>>>>>> main
-
 void searchVehicle(vector<Vehicle> vehicles);
 void displayVehicle(string searchType,
                     vector<vehicleTypesOnOffLot> vehicleTypes);
 
 bool readfile();
-
-int displayMenu();
 
 int calculateSales(const vector<Vehicle>& vehicles, int salesDay, int salesWeek, int salesMonth);
 
@@ -266,33 +254,34 @@ void DisplaySales(int salesDay, int salesWeek, int salesMonth) {
   cout << "Sales this month: $" << salesMonth << endl;
 }
 
-int displayMenu() {
 
-  // I: User inputs number corresponding to the 3 different choices;
-  // searchInventory, displaySales, or customerList P: Validate input O: Output
-  // user choice
+int DisplayMenu() {
 
-  int userChoice = 0;
+//I: User inputs number corresponding to the 3 different choices; searchInventory, displaySales, or customerList OR
+//P: Validate input OR
+//O: Output user choice OR
 
-  cout << "Welcome to the Front Range Community Car Lot Database!" << endl;
-  cout << "| Would you like to search:                          |" << endl;
-  cout << "| 1. Inventory                                       |" << endl;
-  cout << "| 2. Sales Data                                      |" << endl;
-  cout << "| 3. List of Customers                               |" << endl
-       << endl;
-  cout << "Enter Choice: ";
+int userChoice = 0;
+   
+   cout << "Welcome to the Front Range Community Car Lot Database!" << endl; 
+   cout << "| Would you like to search:                          |" << endl;
+   cout << "| 1. Inventory                                       |" << endl;
+   cout << "| 2. Sales Data                                      |" << endl;
+   cout << "| 3. List of Customers                               |" << endl << endl;
+   cout << "Enter Choice: ";
+   
+   cin >> userChoice;
+    
+   while (userChoice < 1 || userChoice > 3) {
+      cout << endl << "Please input a valid number: ";
+      cin >> userChoice;
+   }//end for CC
+   
+   cout << endl;
+   return userChoice;
+   
+}//end DisplayMenu OR
 
-  cin >> userChoice;
-
-  if (userChoice < 1 || userChoice > 3) {
-    cout << endl << "Please input a valid number" << endl;
-  } else {
-    return userChoice;
-  } // end if-else
-
-  return 0;
-
-} // end displayMenu
 
 // I: string containing the type and a vector containing the data.
 // P: display the data.
