@@ -85,3 +85,18 @@ int userChoice = 0;
    return 0;
    
 }//end displayMenu
+
+//I: string containing the type and a vector containing the data.
+//P: display the data.
+//O: same as process.
+void displayVehicle(string searchType, vector<vehicleTypesOnOffLot> vehicleTypes) {
+   // Display the top of the table. MH
+  cout << " " << searchType << " | On Lot | Sold\n";
+  cout << "--------------------------------" << endl;
+
+   // Display the data. MH
+  for (i = 0; i < vehicleTypes.size(); i++) {
+      cout << " " << vehicleTypes.at(i).type << " | " << vehicleTypes.at(i).onLot << " | " << vehicleTypes.at(i).onLot << endl;
+      cout << "----------------------------" << endl;
+  } // end for() 
+} // end displayVehicle()
