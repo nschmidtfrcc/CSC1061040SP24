@@ -17,16 +17,16 @@ int main() {
    //Declarations.(MH)
    vector<Vehicle> Vehicles;
    vector<Customer> Customers;
-   int salesDay = 17625;
-   int salesWeek = 70500;
-   int salesMonth = 282000;
+   int salesDay = 0;
+   int salesWeek = 0;
+   int salesMonth = 0;
    int optionNum = 0;
    int count;
    
    //Gets the data need for the other functions called.(Mh)
-   readfiles();//Please add the names of the two files please.(Marco Hosendove)
+   readfiles();
    
-   CalculateSales(Vehicles);//Unsure wether or not theres going be three different Calculate sales function 1 for days, 1 for week, and 1 for months.Marco Hosendove
+   CalculateSales(Vehicles, salesDay, salesWeek, salesMonth);
    
    //Calls DisplayMenu() to run through the different options through the system.(MH)
    optionNum = DisplayMenu();
