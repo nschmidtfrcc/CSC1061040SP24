@@ -37,6 +37,8 @@ bool readfile();
 
 int displayMenu();
 
+int calculateSales(const vector<Vehicle>& vehicles, int salesDay, int salesWeek, int salesMonth);
+
 void DisplaySales(int salesDay, int salesWeek, int salesMonth);
 
 // Input: Vehicle and custmer data read from file. User input to navigate menus
@@ -230,6 +232,33 @@ void searchVehicle(vector<Vehicle> vehicles) {
   // Passing in the vehicleTypes vector to the display vehicle so they can do it
   displayVehicle(searchType, vehicleTypes);
 } // end searchVehicle()
+
+//Input: A vector with all of the vehicles, dailySales, weeklySales and monthlySales.
+//Process: Creates totalSales; updates dailySales, weeklySales, and monthlySales
+//Output: Total sales value.
+int calculateSales(const vector<Vehicle>& vehicles, int salesDay, int salesWeek, int salesMonth) {
+    int salesTotal = 0;
+    // Iterates through Vehicle vector
+    for (const auto& vehicle : vehicles) {
+      if(vehicle.isSold()){
+          salesTotal += vehicle.GetPrice(); // May be .getPrice()
+          
+          // If the vehicle sold today, add it to dailySales
+          if (vehicle.GetTimeOnLot() <= 1) {
+              salesDay += vehicle.GetPrice();
+          }
+          // If the vehicle sold this week, add it to weeklySales
+          if (((vehicle.GetTimeOnLot() % 7) <= 7)) {
+              salesWeek += vehicle.GetPrice();
+          }
+          // If the vehicle sold this month, add it to monthlySales
+          if (vehicle.GetTimeOnLot() <= 30) { // 30 is the average amount of days in a month.
+              salesMonth += vehicle.GetPrice();
+          }
+      }
+  }
+    return salesTotal;
+}
 
 void DisplaySales(int salesDay, int salesWeek, int salesMonth) {
   cout << "Sales today: $" << salesDay << endl;
