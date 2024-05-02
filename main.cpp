@@ -2,6 +2,7 @@
 #include "Vehicle.h"
 #include <iostream>
 #include <vector>
+#include <fstream>
 using namespace std;
 
 struct vehicleTypesOnOffLot {
@@ -9,6 +10,24 @@ struct vehicleTypesOnOffLot {
   int onLot = 0;
   int offLot = 0;
 };
+
+
+//Input: N/A
+//Process: Reads the text files and populates variables which then fills the vectors of objects with the created objects
+//Output: Returns boolean value based off of success of read operation
+bool readFile() {
+	bool boughtStatus, sold;
+	string tmp, vinNum, firstName, lastName, phoneNum, make, model, color, vin;
+	int year, timeOnLot, price;
+	vector<Customer> customerVec;
+	vector<Vehicle> vehicleVec;
+	ifstream inputFileC("customer.txt");
+	ifstream inputFileV("vehicle.txt");
+	if(!inputFileC.is_open() || !inputFileV.is_open()) {
+		throw runtime_error("Failed to open file. Exiting...");
+		return false;
+	}
+>>>>>>> main
 
 void searchVehicle(vector<Vehicle> vehicles);
 void displayVehicle(string searchType,
