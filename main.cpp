@@ -60,19 +60,19 @@ int calculateSales(const vector<Vehicle>& vehicles, int salesDay, int salesWeek,
     // Iterates through Vehicle vector
     for (const auto& vehicle : vehicles) {
       if(vehicle.isSold()){
-          salesTotal += vehicle.getSalePrice(); // May be .getPrice()
+          salesTotal += vehicle.GetPrice(); // May be .getPrice()
           
           // If the vehicle sold today, add it to dailySales
-          if (vehicle.timeOnLot() <= 1) {
-              salesDay += vehicle.getSalePrice();
+          if (vehicle.GetTimeOnLot() <= 1) {
+              salesDay += vehicle.GetPrice();
           }
           // If the vehicle sold this week, add it to weeklySales
-          if (((vehicle.timeOnLot() % 7) <= 7)) {
-              salesWeek += vehicle.getSalePrice();
+          if (((vehicle.GetTimeOnLot() % 7) <= 7)) {
+              salesWeek += vehicle.GetPrice();
           }
           // If the vehicle sold this month, add it to monthlySales
-          if (vehicle.timeOnLot() <= 30) { // 30 is the average amount of days in a month.
-              salesMonth += vehicle.getSalePrice();
+          if (vehicle.GetTimeOnLot() <= 30) { // 30 is the average amount of days in a month.
+              salesMonth += vehicle.GetPrice();
           }
       }
   }
