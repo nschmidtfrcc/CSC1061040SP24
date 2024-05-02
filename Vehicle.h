@@ -3,17 +3,17 @@
 using namespace std;
 
 class Vehicle{
-public:
-
-Vehicle(){
-string make = "";
-string model = "";
-string color = "";
-string vin = "";
-int year = 0;
-int timeOnLot = 0;
-int price = 0;
-bool sold = false;
+   public:
+   
+   Vehicle(){
+   string make = "";
+   string model = "";
+   string color = "";
+   string vin = "";
+   int year = 0;
+   int timeOnLot = 0;
+   int price = 0;
+   bool sold = false;
 };
 
 void SetMake(string make);
