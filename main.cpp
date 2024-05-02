@@ -27,7 +27,7 @@ bool readFile() {
 		throw runtime_error("Failed to open file. Exiting...");
 		return false;
 	}
->>>>>>> main
+}
 
 void searchVehicle(vector<Vehicle> vehicles);
 void displayVehicle(string searchType,
@@ -304,7 +304,7 @@ void displayVehicle(string searchType,
   cout << "--------------------------------" << endl;
 
   // Display the data. MH
-  for (i = 0; i < vehicleTypes.size(); i++) {
+  for (int i = 0; i < vehicleTypes.size(); i++) {
     cout << " " << vehicleTypes.at(i).type << " | " << vehicleTypes.at(i).onLot
          << " | " << vehicleTypes.at(i).onLot << endl;
     cout << "----------------------------" << endl;
