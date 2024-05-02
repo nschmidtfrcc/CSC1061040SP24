@@ -2,7 +2,6 @@
 #include <vector>
 #include "Vehicle.h"
 #include "Customer.h"
-
 using namespace std;
 
 int DisplayMenu();
@@ -57,6 +56,7 @@ void DisplaySales(int salesDay, int salesWeek, int salesMonth) {
     cout << "Sales this month: $" << salesMonth << endl;
 
 } 
+
 
 int DisplayMenu() {
 
