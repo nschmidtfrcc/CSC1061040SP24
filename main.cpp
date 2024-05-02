@@ -24,12 +24,12 @@ int userChoice = 0;
    
    cin >> userChoice;
     
-   if (userChoice < 1 || userChoice  > 3) {
-      cout << endl << "Please input a valid number" << endl;
-   }else{
-      return userChoice;
-   }//end if-else
+   while (userChoice < 1 || userChoice > 3) {
+      cout << endl << "Please input a valid number: ";
+      cin >> userChoice;
+   }//end for
    
-   return 0;
+   cout << endl;
+   return userChoice;
    
 }//end displayMenu
