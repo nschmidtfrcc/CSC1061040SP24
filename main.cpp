@@ -2,11 +2,9 @@
 #include <vector>
 #include "Vehicle.h"
 #include "Customer.h"
-using namespace std;
-
-#include "customer.h"
-#include "vehicle.h"
 #include <fstream>
+
+using namespace std;
 //Input: N/A
 //Process: Reads the text files and populates variables which then fills the vectors of objects with the created objects
 //Output: Returns boolean value based off of success of read operation
